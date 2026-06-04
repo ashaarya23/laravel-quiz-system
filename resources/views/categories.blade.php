@@ -41,7 +41,8 @@
                 <td class="p-3">{{$category->id}}</td>
                 <td class="p-3">{{$category->name}}</td>
                 <td class="p-3">{{$category->creator}}</td>
-                <td class="p-3"><a class="text-blue-500" href="category/delete/{{$category->id}}">Delete</a></td>
+                <td class="p-3"><a class="text-blue-500" href="/category/delete/{{$category->id}}">Delete</a></td>
+                <td class="p-3"><a class="text-blue-500" href="/quiz-list/{{$category->id}}/{{$category->name}}">View</a></td>
             </tr>
             @endforeach
         </table>
