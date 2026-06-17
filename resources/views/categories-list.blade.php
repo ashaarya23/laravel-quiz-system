@@ -43,26 +43,11 @@
             </tr>
             @endforeach
         </table>
-        
+        <div class="mb-10 mt-5">
+            {{ $categories->links() }}
+        </div>
     </div>
-    <div>
-        <h1 class="text-2xl text-green-900 my-10">Top Quiz</h1>
-        <table border="2" class="mb-20">
-            <tr>
-                <th class="p-3">Name</th>
-                <th class="p-3">Action</th>
-            </tr>
-            @foreach($quizData as $item)
-            <tr class="odd:bg-white even:bg-gray-100 border-b">
-                <td class="p-3">{{$item->name}}</td>  
-                <td class="p-3">
-                    <a  href= "/start-quiz/{{$item->id}}/{{str_replace(' ','-',$item->name)}}" class="text-green-900" href="">Attempt Quiz</a>
-                </td>  
-            </tr>
-            @endforeach
-        </table>
-        
-    </div>
+    
    </div>
   <x-footer-user></x-footer-user>
 </body>
